@@ -1,31 +1,20 @@
-2024-09-29 15:09:39,904 - INFO - Logger initialized.
-2024-09-29 15:09:39,904 - INFO - Starting GUI Testing Framework...
-2024-09-29 15:09:39,904 - INFO - Running all test cases...
-2024-09-29 15:09:39,904 - INFO - Running test case: Button Click
-2024-09-29 15:09:49,668 - INFO - Captured mouse coordinates: (580, 774)
-2024-09-29 15:09:50,956 - INFO - Clicked button at (580, 774)
-2024-09-29 15:09:51,170 - INFO - Screenshot saved: reports\after_button_click.png
-2024-09-29 15:09:51,170 - INFO - Running test case: Text Input
-2024-09-29 15:10:03,083 - INFO - Captured mouse coordinates: (789, 783)
-2024-09-29 15:10:05,693 - INFO - Entered text at (789, 783): Hello World
-2024-09-29 15:10:05,913 - INFO - Screenshot saved: reports\after_text_input.png
-2024-09-29 15:10:05,913 - INFO - Running test case: Calculator Addition
-2024-09-29 15:10:15,339 - INFO - Captured mouse coordinates: (1265, 774)
-2024-09-29 15:10:26,612 - INFO - Captured mouse coordinates: (646, 793)
-2024-09-29 15:10:33,604 - INFO - Captured mouse coordinates: (1168, 784)
-2024-09-29 15:10:41,749 - INFO - Captured mouse coordinates: (1167, 770)
-2024-09-29 15:10:43,186 - INFO - Screenshot saved: reports\before_click_7.png
-2024-09-29 15:10:43,301 - INFO - Clicked '7' button
-2024-09-29 15:10:43,435 - INFO - Screenshot saved: reports\after_click_7.png
-2024-09-29 15:10:44,784 - INFO - Screenshot saved: reports\before_click_plus.png
-2024-09-29 15:10:44,901 - INFO - Clicked '+' button
-2024-09-29 15:10:45,143 - INFO - Screenshot saved: reports\after_click_plus.png
-2024-09-29 15:10:46,499 - INFO - Screenshot saved: reports\before_click_3.png
-2024-09-29 15:10:46,619 - INFO - Clicked '3' button
-2024-09-29 15:10:46,842 - INFO - Screenshot saved: reports\after_click_3.png
-2024-09-29 15:10:48,194 - INFO - Screenshot saved: reports\before_click_equal.png
-2024-09-29 15:10:48,299 - INFO - Clicked '=' button
-2024-09-29 15:10:48,531 - INFO - Screenshot saved: reports\after_click_equal.png
-2024-09-29 15:10:48,531 - INFO - Calculator addition operation executed successfully!
-2024-09-29 15:10:48,531 - INFO - All test cases completed.
-2024-09-29 15:10:48,531 - INFO - All test cases executed successfully!
+2024-10-01 20:22:30,452 - INFO - Logger initialized.
+2024-10-01 20:22:30,453 - INFO - Starting GUI Testing Framework...
+2024-10-01 20:22:30,453 - INFO - Running all test cases...
+2024-10-01 20:22:30,454 - INFO - Running test case: Calculator Addition (7 + 3)
+2024-10-01 20:22:31,463 - INFO - Calculator window position and size - Left: -26, Top: 0, Width: 1040, Height: 859
+2024-10-01 20:22:32,443 - INFO - Screenshot saved: reports\before_click_7.png
+2024-10-01 20:22:32,566 - INFO - Clicked '7' button at (205, 6241)
+2024-10-01 20:22:32,798 - INFO - Screenshot saved: reports\after_click_7.png
+2024-10-01 20:22:33,591 - INFO - Screenshot saved: reports\before_click_plus.png
+2024-10-01 20:22:33,709 - INFO - Clicked '+' button at (611, 7501)
+2024-10-01 20:22:33,868 - INFO - Screenshot saved: reports\after_click_plus.png
+2024-10-01 20:22:34,788 - INFO - Screenshot saved: reports\before_click_3.png
+2024-10-01 20:22:34,909 - INFO - Clicked '3' button at (468, 7541)
+2024-10-01 20:22:35,096 - INFO - Screenshot saved: reports\after_click_3.png
+2024-10-01 20:22:35,920 - INFO - Screenshot saved: reports\before_click_equal.png
+2024-10-01 20:22:36,042 - INFO - Clicked '=' button at (609, 8171)
+2024-10-01 20:22:36,253 - INFO - Screenshot saved: reports\after_click_equal.png
+2024-10-01 20:22:36,254 - INFO - Calculator addition operation (7 + 3) executed successfully!
+2024-10-01 20:22:36,254 - INFO - All test cases completed.
+2024-10-01 20:22:36,254 - INFO - All test cases executed successfully!

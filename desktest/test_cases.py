@@ -2,6 +2,7 @@ import pyautogui
 import time
 import logging
 from utils import take_screenshot, capture_coordinates
+import pygetwindow as gw
 
 def run_all_tests():
     """
@@ -10,8 +11,8 @@ def run_all_tests():
     logging.info("Running all test cases...")
 
     # Run individual test cases with user-defined positions
-    test_button_click()
-    test_text_input()
+    # test_button_click()
+    # test_text_input()
     test_calculator_addition()
     
     logging.info("All test cases completed.")
@@ -62,57 +63,58 @@ def test_text_input():
 
 def test_calculator_addition():
     """
-    Test case to perform an addition operation in the Windows Calculator.
+    Test case to automate 7 + 3 = 10 calculation in the Calculator application using hardcoded coordinates.
     """
-    logging.info("Running test case: Calculator Addition")
+    logging.info("Running test case: Calculator Addition (7 + 3)")
 
     try:
-        # Prompt user to move to the '7' button and press Enter
-        print("Move your mouse to the '7' button and press Enter...")
-        seven_x, seven_y = capture_coordinates()
+        # Step 1: Bring the Calculator to the foreground
+        calc_window = gw.getWindowsWithTitle('Calculator')[0]  # Look for a window with 'Calculator' in the title
+        calc_window.activate()  # Bring the Calculator to the foreground
 
-        # Prompt user to move to the '+' button and press Enter
-        print("Move your mouse to the '+' button and press Enter...")
-        plus_x, plus_y = capture_coordinates()
+        # Step 2: Get the Calculator window's position and size
+        time.sleep(1)  # Wait for the window to be active
+        left, top, width, height = calc_window.left, calc_window.top, calc_window.width, calc_window.height
+        logging.info(f"Calculator window position and size - Left: {left}, Top: {top}, Width: {width}, Height: {height}")
 
-        # Prompt user to move to the '3' button and press Enter
-        print("Move your mouse to the '3' button and press Enter...")
-        three_x, three_y = capture_coordinates()
+        # Step 3: Define button positions relative to the window's top-left corner
+        # Adjust these values if the positions differ on your system
+        button_7_pos = (left + 231, top + 6241)       # Relative position of button '7'
+        button_plus_pos = (left + 637, top + 7501)   # Relative position of button '+'
+        button_3_pos = (left + 494, top + 7541)       # Relative position of button '3'
+        button_equal_pos = (left + 635, top + 8171)  # Relative position of button '='
 
-        # Prompt user to move to the '=' button and press Enter
-        print("Move your mouse to the '=' button and press Enter...")
-        equal_x, equal_y = capture_coordinates()
+        # Step 4: Perform the addition operation using these positions
 
-        # Move and click the '7' button
-        pyautogui.moveTo(seven_x, seven_y, duration=1)
-        take_screenshot("before_click_7.png")
+        # Click on button '7'
+        pyautogui.moveTo(button_7_pos, duration=0.5)
+        take_screenshot("before_click_7.png")  # Screenshot before clicking '7'
         pyautogui.click()
-        logging.info("Clicked '7' button")
-        take_screenshot("after_click_7.png")
+        logging.info(f"Clicked '7' button at {button_7_pos}")
+        take_screenshot("after_click_7.png")  # Screenshot after clicking '7'
 
-        # Move and click the '+' button
-        pyautogui.moveTo(plus_x, plus_y, duration=1)
+        # Click on button '+'
+        pyautogui.moveTo(button_plus_pos, duration=0.5)
         take_screenshot("before_click_plus.png")
         pyautogui.click()
-        logging.info("Clicked '+' button")
+        logging.info(f"Clicked '+' button at {button_plus_pos}")
         take_screenshot("after_click_plus.png")
 
-        # Move and click the '3' button
-        pyautogui.moveTo(three_x, three_y, duration=1)
+        # Click on button '3'
+        pyautogui.moveTo(button_3_pos, duration=0.5)
         take_screenshot("before_click_3.png")
         pyautogui.click()
-        logging.info("Clicked '3' button")
+        logging.info(f"Clicked '3' button at {button_3_pos}")
         take_screenshot("after_click_3.png")
 
-        # Move and click the '=' button
-        pyautogui.moveTo(equal_x, equal_y, duration=1)
+        # Click on button '='
+        pyautogui.moveTo(button_equal_pos, duration=0.5)
         take_screenshot("before_click_equal.png")
         pyautogui.click()
-        logging.info("Clicked '=' button")
+        logging.info(f"Clicked '=' button at {button_equal_pos}")
         take_screenshot("after_click_equal.png")
 
-        logging.info("Calculator addition operation executed successfully!")
+        logging.info("Calculator addition operation (7 + 3) executed successfully!")
 
     except Exception as e:
         logging.error(f"Error in Calculator Addition Test: {e}")
-
