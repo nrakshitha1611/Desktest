@@ -10,7 +10,7 @@ def run_all_tests():
     """
     logging.info("Running all test cases...")
 
-    # Run individual test cases with user-defined positions
+    # Run individual test cases
     # test_button_click()
     # test_text_input()
     test_calculator_addition()
